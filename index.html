@@ -1,9 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Math Lessons</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,56 +17,150 @@
         <p>Learn math one lesson at a time.</p>
     </header>
 
+
     <main>
 
-        <!-- HOME -->
+        <!-- =========================
+             HOME / GRADES
+        ========================== -->
+
         <section id="home" class="page">
+
             <h2>Choose a Grade</h2>
 
             <div id="grade-list" class="card-grid"></div>
+
         </section>
 
 
-        <!-- CATEGORIES -->
-        <section id="categories" class="page hidden">
-            <button class="back-button" onclick="showHome()">← Back</button>
+        <!-- =========================
+             CATEGORIES
+        ========================== -->
 
-            <h2 id="category-title">Categories</h2>
+        <section id="categories" class="page hidden">
+
+            <button class="back-button" onclick="showHome()">
+                ← Back
+            </button>
+
+            <h2 id="category-title">
+                Categories
+            </h2>
 
             <div id="category-list" class="card-grid"></div>
+
         </section>
 
 
-        <!-- LESSON LIST -->
-        <section id="lessons" class="page hidden">
-            <button class="back-button" onclick="showCategories()">← Back</button>
+        <!-- =========================
+             LESSON LIST
+        ========================== -->
 
-            <h2 id="lesson-title">Lessons</h2>
+        <section id="lessons" class="page hidden">
+
+            <button class="back-button" onclick="showCategories()">
+                ← Back
+            </button>
+
+            <h2 id="lesson-title">
+                Lessons
+            </h2>
 
             <div id="lesson-list" class="lesson-list"></div>
+
         </section>
 
 
-        <!-- ACTUAL LESSON -->
+        <!-- =========================
+             LESSON
+        ========================== -->
+
         <section id="lesson-page" class="page hidden">
-            <button class="back-button" onclick="showLessons()">← Back</button>
+
+            <button class="back-button" onclick="showLessons()">
+                ← Back
+            </button>
 
             <article class="lesson-content">
 
                 <h2 id="current-lesson-title"></h2>
 
+                <!-- Lesson explanation -->
                 <div id="current-lesson-content"></div>
 
+
+                <!-- =========================
+                     PRACTICE
+                ========================== -->
+
+                <div id="practice-area">
+
+                    <hr>
+
+                    <h2>✏️ Practice</h2>
+
+                    <p id="question-number"></p>
+
+                    <h3 id="question-text"></h3>
+
+                    <input
+                        type="text"
+                        id="answer-input"
+                        placeholder="Type your answer..."
+                        autocomplete="off"
+                    >
+
+                    <br><br>
+
+                    <button
+                        class="back-button"
+                        onclick="checkAnswer()"
+                    >
+                        Check Answer
+                    </button>
+
+                    <p id="answer-result"></p>
+
+                </div>
+
+
+                <!-- =========================
+                     COMPLETION
+                ========================== -->
+
+                <div id="completion-area" class="hidden">
+
+                    <hr>
+
+                    <h2>🎉 Lesson Complete!</h2>
+
+                    <p id="final-score"></p>
+
+                    <button
+                        class="back-button"
+                        onclick="showLessons()"
+                    >
+                        Back to Lessons
+                    </button>
+
+                </div>
+
             </article>
+
         </section>
 
     </main>
 
+
     <footer>
+
         <p>Math Lessons</p>
+
     </footer>
+
 
     <script src="lessons.js"></script>
 
 </body>
 </html>
+```
