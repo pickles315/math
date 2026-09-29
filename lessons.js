@@ -1,617 +1,340 @@
-```javascript
-/*
-====================================================
-                MATH LESSON DATABASE
-====================================================
-
-ADDING A LESSON:
-
-Just add another object to the "lessons" array.
-
-Each lesson contains:
-
-    number
-    title
-    explanation
-    questions
-
-Every lesson should have 5 questions.
-
-Example:
-
-{
-    number: 3,
-    title: "My New Lesson",
-
-    explanation: `
-        <h3>My lesson</h3>
-        <p>This is what students learn.</p>
-    `,
-
-    questions: [
-        {
-            question: "What is 2 + 2?",
-            answer: "4"
-        },
-
-        {
-            question: "What is 3 + 3?",
-            answer: "6"
-        },
-
-        ...
-    ]
-}
-
-====================================================
-*/
-
-
 const grades = [
 
-    /*
-    ==================================================
-                    GRADE 6
-    ==================================================
-    */
+    // =========================================================
+    // GRADE 6
+    // =========================================================
 
     {
-        id: "grade6",
-
+        id: 6,
         name: "Grade 6",
-
-        description: "Middle school mathematics",
 
         categories: [
 
-            /*
-            ==========================================
-                    NUMBERS & OPERATIONS
-            ==========================================
-            */
+            // =================================================
+            // NUMBERS & OPERATIONS
+            // =================================================
 
             {
-                id: "numbers",
-
                 name: "Numbers & Operations",
-
-                description: "Learn how numbers work.",
 
                 lessons: [
 
                     {
                         number: 1,
+                        title: "Whole Numbers",
 
-                        title: "Understanding Whole Numbers",
-
-                        explanation: `
-                            <h3>What are whole numbers?</h3>
-
-                            <p>
-                                Whole numbers are numbers that start at 0
-                                and continue upward.
-                            </p>
-
-                            <div class="example">
-                                <strong>Examples:</strong><br><br>
-
-                                0, 1, 2, 3, 4, 5, 6, 7...
-                            </div>
-
-                            <p>
-                                Whole numbers do not include negative numbers,
-                                fractions, or decimals.
-                            </p>
-                        `,
+                        explanation:
+                            "Whole numbers are numbers like 0, 1, 2, 3, 4, and so on.",
 
                         questions: [
-
                             {
-                                question: "What is the smallest whole number?",
-                                answer: "0"
+                                question: "What is 25 + 17?",
+                                answer: "42"
                             },
-
                             {
-                                question: "Is 7 a whole number?",
-                                answer: "yes"
+                                question: "What is 100 - 37?",
+                                answer: "63"
                             },
-
                             {
-                                question: "Is -3 a whole number?",
-                                answer: "no"
+                                question: "What is 8 × 7?",
+                                answer: "56"
                             },
-
                             {
-                                question: "Is 25 a whole number?",
-                                answer: "yes"
+                                question: "What is 81 ÷ 9?",
+                                answer: "9"
                             },
-
                             {
-                                question: "Is 1.5 a whole number?",
-                                answer: "no"
+                                question: "What number comes after 999?",
+                                answer: "1000"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 2,
-
                         title: "Place Value",
 
-                        explanation: `
-                            <h3>What is place value?</h3>
-
-                            <p>
-                                Place value tells us how much a digit is worth
-                                based on where it appears in a number.
-                            </p>
-
-                            <div class="example">
-
-                                <strong>Example:</strong><br><br>
-
-                                4,582
-
-                                <br><br>
-
-                                4 = thousands<br>
-                                5 = hundreds<br>
-                                8 = tens<br>
-                                2 = ones
-
-                            </div>
-                        `,
+                        explanation:
+                            "Place value tells you what each digit is worth based on where it appears in a number.",
 
                         questions: [
-
                             {
                                 question: "What is the value of the 5 in 5,432?",
                                 answer: "5000"
                             },
-
                             {
-                                question: "What is the value of the 3 in 3,214?",
-                                answer: "3000"
+                                question: "What is the value of the 7 in 2,718?",
+                                answer: "700"
                             },
-
                             {
-                                question: "What place is the 7 in 2,374?",
-                                answer: "tens"
+                                question: "What digit is in the tens place of 684?",
+                                answer: "8"
                             },
-
                             {
-                                question: "What place is the 9 in 9,821?",
-                                answer: "thousands"
+                                question: "What digit is in the hundreds place of 9,321?",
+                                answer: "3"
                             },
-
                             {
-                                question: "What is the value of the 6 in 4,651?",
-                                answer: "600"
+                                question: "Write 4,000 + 300 + 20 + 6 as a number.",
+                                answer: "4326"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 3,
-
                         title: "Adding Whole Numbers",
 
-                        explanation: `
-                            <h3>Adding numbers</h3>
-
-                            <p>
-                                Addition combines numbers together.
-                            </p>
-
-                            <div class="example">
-                                245 + 132 = 377
-                            </div>
-
-                            <p>
-                                When adding large numbers, line up the digits
-                                according to their place value.
-                            </p>
-                        `,
+                        explanation:
+                            "When adding whole numbers, line up the place values and add from right to left.",
 
                         questions: [
-
                             {
-                                question: "What is 5 + 3?",
-                                answer: "8"
+                                question: "What is 234 + 125?",
+                                answer: "359"
                             },
-
                             {
-                                question: "What is 12 + 7?",
-                                answer: "19"
+                                question: "What is 450 + 275?",
+                                answer: "725"
                             },
-
                             {
-                                question: "What is 25 + 15?",
-                                answer: "40"
+                                question: "What is 1,200 + 350?",
+                                answer: "1550"
                             },
-
                             {
-                                question: "What is 100 + 250?",
-                                answer: "350"
+                                question: "What is 89 + 76?",
+                                answer: "165"
                             },
-
                             {
-                                question: "What is 245 + 132?",
-                                answer: "377"
+                                question: "What is 3,421 + 2,108?",
+                                answer: "5529"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 4,
-
                         title: "Subtracting Whole Numbers",
 
-                        explanation: `
-                            <h3>Subtraction</h3>
-
-                            <p>
-                                Subtraction tells us how much remains after
-                                taking one number away from another.
-                            </p>
-
-                            <div class="example">
-                                500 - 125 = 375
-                            </div>
-                        `,
+                        explanation:
+                            "Subtracting finds the difference between numbers.",
 
                         questions: [
-
                             {
-                                question: "What is 10 - 3?",
-                                answer: "7"
+                                question: "What is 50 - 23?",
+                                answer: "27"
                             },
-
                             {
-                                question: "What is 20 - 5?",
-                                answer: "15"
+                                question: "What is 100 - 46?",
+                                answer: "54"
                             },
-
                             {
-                                question: "What is 50 - 25?",
-                                answer: "25"
+                                question: "What is 725 - 300?",
+                                answer: "425"
                             },
-
                             {
-                                question: "What is 100 - 45?",
-                                answer: "55"
+                                question: "What is 900 - 275?",
+                                answer: "625"
                             },
-
                             {
-                                question: "What is 500 - 125?",
-                                answer: "375"
+                                question: "What is 1,000 - 438?",
+                                answer: "562"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 5,
-
                         title: "Multiplication",
 
-                        explanation: `
-                            <h3>Multiplication</h3>
-
-                            <p>
-                                Multiplication can be thought of as repeated
-                                addition.
-                            </p>
-
-                            <div class="example">
-                                4 × 3 = 12
-                                <br><br>
-                                3 + 3 + 3 + 3 = 12
-                            </div>
-                        `,
+                        explanation:
+                            "Multiplication is repeated addition. For example, 4 × 3 means four groups of three.",
 
                         questions: [
-
-                            {
-                                question: "What is 2 × 3?",
-                                answer: "6"
-                            },
-
-                            {
-                                question: "What is 4 × 5?",
-                                answer: "20"
-                            },
-
                             {
                                 question: "What is 6 × 7?",
                                 answer: "42"
                             },
-
                             {
-                                question: "What is 8 × 8?",
-                                answer: "64"
+                                question: "What is 8 × 9?",
+                                answer: "72"
                             },
-
                             {
                                 question: "What is 12 × 5?",
                                 answer: "60"
+                            },
+                            {
+                                question: "What is 15 × 4?",
+                                answer: "60"
+                            },
+                            {
+                                question: "What is 25 × 4?",
+                                answer: "100"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 6,
-
                         title: "Division",
 
-                        explanation: `
-                            <h3>Division</h3>
-
-                            <p>
-                                Division separates a number into equal groups.
-                            </p>
-
-                            <div class="example">
-                                20 ÷ 4 = 5
-                            </div>
-
-                            <p>
-                                This means that 20 can be separated into
-                                4 equal groups of 5.
-                            </p>
-                        `,
+                        explanation:
+                            "Division splits a number into equal groups.",
 
                         questions: [
-
-                            {
-                                question: "What is 10 ÷ 2?",
-                                answer: "5"
-                            },
-
                             {
                                 question: "What is 20 ÷ 4?",
                                 answer: "5"
                             },
-
                             {
-                                question: "What is 30 ÷ 5?",
+                                question: "What is 36 ÷ 6?",
                                 answer: "6"
                             },
-
                             {
-                                question: "What is 42 ÷ 7?",
-                                answer: "6"
+                                question: "What is 72 ÷ 8?",
+                                answer: "9"
                             },
-
                             {
                                 question: "What is 100 ÷ 10?",
                                 answer: "10"
+                            },
+                            {
+                                question: "What is 144 ÷ 12?",
+                                answer: "12"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 7,
-
                         title: "Order of Operations",
 
-                        explanation: `
-                            <h3>Order of Operations</h3>
-
-                            <p>
-                                When an equation contains multiple operations,
-                                we need to follow a specific order.
-                            </p>
-
-                            <div class="example">
-
-                                <strong>PEMDAS</strong><br><br>
-
-                                Parentheses<br>
-                                Exponents<br>
-                                Multiplication<br>
-                                Division<br>
-                                Addition<br>
-                                Subtraction
-
-                            </div>
-                        `,
+                        explanation:
+                            "Use PEMDAS: Parentheses, Exponents, Multiplication, Division, Addition, Subtraction.",
 
                         questions: [
-
                             {
                                 question: "What is 2 + 3 × 4?",
                                 answer: "14"
                             },
-
-                            {
-                                question: "What is 10 - 2 × 3?",
-                                answer: "4"
-                            },
-
                             {
                                 question: "What is (2 + 3) × 4?",
                                 answer: "20"
                             },
-
                             {
-                                question: "What is 20 ÷ 4 + 2?",
-                                answer: "7"
+                                question: "What is 10 - 2 × 3?",
+                                answer: "4"
                             },
-
                             {
-                                question: "What is 5 + 2 × 5?",
-                                answer: "15"
+                                question: "What is 18 ÷ 3 + 2?",
+                                answer: "8"
+                            },
+                            {
+                                question: "What is 5 + 2 × 6?",
+                                answer: "17"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 8,
-
                         title: "Factors",
 
-                        explanation: `
-                            <h3>Factors</h3>
-
-                            <p>
-                                A factor is a number that multiplies with
-                                another number to produce a result.
-                            </p>
-
-                            <div class="example">
-                                Factors of 12:
-                                <br><br>
-                                1, 2, 3, 4, 6, 12
-                            </div>
-                        `,
+                        explanation:
+                            "A factor is a number that divides evenly into another number.",
 
                         questions: [
-
                             {
-                                question: "Is 2 a factor of 10?",
+                                question: "Is 3 a factor of 12? (yes/no)",
                                 answer: "yes"
                             },
-
                             {
-                                question: "Is 3 a factor of 10?",
+                                question: "Is 5 a factor of 22? (yes/no)",
                                 answer: "no"
                             },
-
                             {
-                                question: "Is 5 a factor of 20?",
+                                question: "What is one factor of 20?",
+                                answer: "2"
+                            },
+                            {
+                                question: "Is 7 a factor of 35? (yes/no)",
                                 answer: "yes"
                             },
-
                             {
-                                question: "Is 4 a factor of 16?",
-                                answer: "yes"
-                            },
-
-                            {
-                                question: "Is 7 a factor of 20?",
+                                question: "Is 4 a factor of 18? (yes/no)",
                                 answer: "no"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 9,
-
                         title: "Multiples",
 
-                        explanation: `
-                            <h3>Multiples</h3>
-
-                            <p>
-                                Multiples are the results of multiplying
-                                a number by whole numbers.
-                            </p>
-
-                            <div class="example">
-                                Multiples of 5:
-                                <br><br>
-                                5, 10, 15, 20, 25, 30...
-                            </div>
-                        `,
+                        explanation:
+                            "Multiples are the numbers you get when you multiply a number by whole numbers.",
 
                         questions: [
-
                             {
-                                question: "What is the next multiple of 5 after 10?",
-                                answer: "15"
+                                question: "What is the first positive multiple of 5?",
+                                answer: "5"
                             },
-
-                            {
-                                question: "What is the next multiple of 3 after 6?",
-                                answer: "9"
-                            },
-
                             {
                                 question: "What is the next multiple of 4 after 12?",
                                 answer: "16"
                             },
-
                             {
-                                question: "What is the next multiple of 10 after 20?",
-                                answer: "30"
+                                question: "Is 24 a multiple of 6? (yes/no)",
+                                answer: "yes"
                             },
-
                             {
-                                question: "What is the next multiple of 7 after 14?",
-                                answer: "21"
+                                question: "Is 25 a multiple of 4? (yes/no)",
+                                answer: "no"
+                            },
+                            {
+                                question: "What is 7 × 6?",
+                                answer: "42"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 10,
-
                         title: "Prime Numbers",
 
-                        explanation: `
-                            <h3>Prime Numbers</h3>
-
-                            <p>
-                                A prime number has exactly two factors:
-                                1 and itself.
-                            </p>
-
-                            <div class="example">
-                                Examples:
-                                <br><br>
-                                2, 3, 5, 7, 11, 13...
-                            </div>
-
-                            <p>
-                                Remember: 1 is not a prime number.
-                            </p>
-                        `,
+                        explanation:
+                            "A prime number has exactly two factors: 1 and itself.",
 
                         questions: [
-
                             {
-                                question: "Is 2 prime?",
+                                question: "Is 7 prime? (yes/no)",
                                 answer: "yes"
                             },
-
                             {
-                                question: "Is 5 prime?",
-                                answer: "yes"
-                            },
-
-                            {
-                                question: "Is 9 prime?",
+                                question: "Is 10 prime? (yes/no)",
                                 answer: "no"
                             },
-
                             {
-                                question: "Is 11 prime?",
+                                question: "Is 13 prime? (yes/no)",
                                 answer: "yes"
                             },
-
                             {
-                                question: "Is 15 prime?",
+                                question: "Is 21 prime? (yes/no)",
                                 answer: "no"
+                            },
+                            {
+                                question: "What is the smallest prime number?",
+                                answer: "2"
                             }
-
                         ]
                     }
 
@@ -619,118 +342,75 @@ const grades = [
             },
 
 
-            /*
-            ==========================================
-                        FRACTIONS
-            ==========================================
-            */
+            // =================================================
+            // FRACTIONS
+            // =================================================
 
             {
-                id: "fractions",
-
                 name: "Fractions",
-
-                description: "Learn how fractions work.",
 
                 lessons: [
 
                     {
                         number: 1,
-
                         title: "What is a Fraction?",
 
-                        explanation: `
-                            <h3>Fractions</h3>
-
-                            <p>
-                                A fraction represents part of a whole.
-                            </p>
-
-                            <div class="example">
-                                <strong>1/2</strong>
-                                <br><br>
-                                The top number is the numerator.
-                                <br>
-                                The bottom number is the denominator.
-                            </div>
-                        `,
+                        explanation:
+                            "A fraction represents part of a whole. The top number is the numerator and the bottom number is the denominator.",
 
                         questions: [
-
                             {
                                 question: "What is the numerator in 3/5?",
                                 answer: "3"
                             },
-
                             {
-                                question: "What is the denominator in 3/5?",
-                                answer: "5"
-                            },
-
-                            {
-                                question: "What is the numerator in 7/10?",
+                                question: "What is the denominator in 4/7?",
                                 answer: "7"
                             },
-
                             {
-                                question: "What is the denominator in 2/8?",
-                                answer: "8"
-                            },
-
-                            {
-                                question: "What fraction represents one half?",
+                                question: "What fraction means one half?",
                                 answer: "1/2"
+                            },
+                            {
+                                question: "Is 1/4 less than 1/2? (yes/no)",
+                                answer: "yes"
+                            },
+                            {
+                                question: "How many fourths make one whole?",
+                                answer: "4"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 2,
-
                         title: "Equivalent Fractions",
 
-                        explanation: `
-                            <h3>Equivalent Fractions</h3>
-
-                            <p>
-                                Equivalent fractions have the same value,
-                                even though they look different.
-                            </p>
-
-                            <div class="example">
-                                1/2 = 2/4 = 3/6
-                            </div>
-                        `,
+                        explanation:
+                            "Equivalent fractions have different numbers but represent the same amount.",
 
                         questions: [
-
                             {
-                                question: "Is 1/2 equal to 2/4?",
+                                question: "What is an equivalent fraction to 1/2 with denominator 4?",
+                                answer: "2/4"
+                            },
+                            {
+                                question: "What is an equivalent fraction to 1/3 with denominator 6?",
+                                answer: "2/6"
+                            },
+                            {
+                                question: "Is 2/4 equal to 1/2? (yes/no)",
                                 answer: "yes"
                             },
-
                             {
-                                question: "Is 1/3 equal to 2/6?",
-                                answer: "yes"
-                            },
-
-                            {
-                                question: "Is 1/2 equal to 2/5?",
+                                question: "Is 3/5 equal to 1/2? (yes/no)",
                                 answer: "no"
                             },
-
                             {
-                                question: "Is 2/4 equal to 1/2?",
-                                answer: "yes"
-                            },
-
-                            {
-                                question: "Is 3/6 equal to 1/2?",
-                                answer: "yes"
+                                question: "What is 2/3 × 2/2?",
+                                answer: "4/6"
                             }
-
                         ]
                     }
 
@@ -741,130 +421,81 @@ const grades = [
     },
 
 
-    /*
-    ==================================================
-                    GRADE 7
-    ==================================================
-    */
+    // =========================================================
+    // GRADE 7
+    // =========================================================
 
     {
-        id: "grade7",
-
+        id: 7,
         name: "Grade 7",
-
-        description: "More advanced mathematics",
 
         categories: [
 
             {
-                id: "algebra",
-
                 name: "Algebra",
-
-                description: "Learn the basics of algebra.",
 
                 lessons: [
 
                     {
                         number: 1,
-
                         title: "Variables",
 
-                        explanation: `
-                            <h3>Variables</h3>
-
-                            <p>
-                                A variable is a letter or symbol that represents
-                                an unknown value.
-                            </p>
-
-                            <div class="example">
-                                x + 5 = 12
-                                <br><br>
-                                Here, x is the variable.
-                            </div>
-                        `,
+                        explanation:
+                            "A variable is a letter or symbol that represents an unknown number.",
 
                         questions: [
-
                             {
-                                question: "In x + 5 = 10, what is the variable?",
+                                question: "In x + 5 = 12, what is the variable?",
                                 answer: "x"
                             },
-
                             {
-                                question: "In y + 3 = 8, what is the variable?",
-                                answer: "y"
+                                question: "If x = 4, what is x + 3?",
+                                answer: "7"
                             },
-
                             {
-                                question: "Is x a variable?",
-                                answer: "yes"
+                                question: "If y = 10, what is y - 6?",
+                                answer: "4"
                             },
-
                             {
-                                question: "Is 5 a variable?",
-                                answer: "no"
+                                question: "If a = 5, what is 2a?",
+                                answer: "10"
                             },
-
                             {
-                                question: "In a + 2 = 9, what is the variable?",
-                                answer: "a"
+                                question: "If x = 3, what is x × 4?",
+                                answer: "12"
                             }
-
                         ]
                     },
 
 
                     {
                         number: 2,
-
                         title: "Solving Simple Equations",
 
-                        explanation: `
-                            <h3>Solving Equations</h3>
-
-                            <p>
-                                We can solve an equation by finding the value
-                                of the unknown variable.
-                            </p>
-
-                            <div class="example">
-                                x + 4 = 10
-                                <br><br>
-                                Subtract 4 from both sides:
-                                <br>
-                                x = 6
-                            </div>
-                        `,
+                        explanation:
+                            "To solve an equation, find the value of the variable that makes the equation true.",
 
                         questions: [
-
-                            {
-                                question: "Solve: x + 3 = 8",
-                                answer: "5"
-                            },
-
                             {
                                 question: "Solve: x + 5 = 12",
                                 answer: "7"
                             },
-
                             {
-                                question: "Solve: x - 2 = 6",
-                                answer: "8"
+                                question: "Solve: x - 3 = 8",
+                                answer: "11"
                             },
-
                             {
                                 question: "Solve: x + 10 = 20",
                                 answer: "10"
                             },
-
                             {
-                                question: "Solve: x - 5 = 15",
-                                answer: "20"
+                                question: "Solve: 2x = 14",
+                                answer: "7"
+                            },
+                            {
+                                question: "Solve: x ÷ 3 = 5",
+                                answer: "15"
                             }
-
                         ]
                     }
 
@@ -877,55 +508,30 @@ const grades = [
 ];
 
 
-
-/*
-====================================================
-                 WEBSITE VARIABLES
-====================================================
-*/
+// =============================================================
+// CURRENT LESSON STATE
+// =============================================================
 
 let selectedGrade = null;
-
 let selectedCategory = null;
-
 let selectedLesson = null;
 
-
-/*
-====================================================
-                 PRACTICE VARIABLES
-====================================================
-*/
-
 let currentQuestion = 0;
-
 let score = 0;
 
 
-/*
-====================================================
-                 PAGE MANAGEMENT
-====================================================
-*/
+// =============================================================
+// PAGE CONTROL
+// =============================================================
 
 function hideAllPages() {
 
-    document
-        .querySelectorAll(".page")
-        .forEach(page => {
-
-            page.classList.add("hidden");
-
-        });
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.add("hidden");
+    });
 
 }
 
-
-/*
-====================================================
-                    HOME
-====================================================
-*/
 
 function showHome() {
 
@@ -935,183 +541,41 @@ function showHome() {
         .getElementById("home")
         .classList.remove("hidden");
 
-    selectedGrade = null;
-
-    selectedCategory = null;
-
-    selectedLesson = null;
-
 }
 
 
-/*
-====================================================
-                  CATEGORIES
-====================================================
-*/
+// =============================================================
+// GRADE SELECTION
+// =============================================================
 
-function showCategories() {
+function showCategories(grade) {
+
+    selectedGrade = grade;
 
     hideAllPages();
 
-    document
-        .getElementById("categories")
-        .classList.remove("hidden");
+    const page = document.getElementById("categories");
 
-}
+    page.classList.remove("hidden");
 
-
-/*
-====================================================
-                    LESSONS
-====================================================
-*/
-
-function showLessons() {
-
-    hideAllPages();
-
-    document
-        .getElementById("lessons")
-        .classList.remove("hidden");
-
-}
-
-
-/*
-====================================================
-              LOAD GRADES
-====================================================
-*/
-
-function loadGrades() {
-
-    const container =
-        document.getElementById("grade-list");
-
-    container.innerHTML = "";
-
-    grades.forEach(grade => {
-
-        const card =
-            document.createElement("div");
-
-        card.className = "card";
-
-        card.innerHTML = `
-            <h3>${grade.name}</h3>
-            <p>${grade.description}</p>
-        `;
-
-        card.onclick = () => {
-
-            selectedGrade = grade;
-
-            loadCategories();
-
-        };
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-/*
-====================================================
-            LOAD CATEGORIES
-====================================================
-*/
-
-function loadCategories() {
-
-    hideAllPages();
-
-    document
-        .getElementById("categories")
-        .classList.remove("hidden");
-
-    document
-        .getElementById("category-title")
-        .textContent =
-            `${selectedGrade.name} Categories`;
+    document.getElementById("category-title").textContent =
+        `${grade.name} Math`;
 
     const container =
         document.getElementById("category-list");
 
     container.innerHTML = "";
 
-    selectedGrade.categories.forEach(category => {
+    grade.categories.forEach(category => {
 
-        const card =
-            document.createElement("div");
+        const button = document.createElement("button");
 
-        card.className = "card";
+        button.className = "card";
 
-        card.innerHTML = `
-            <h3>${category.name}</h3>
-            <p>${category.description}</p>
-        `;
-
-        card.onclick = () => {
-
-            selectedCategory = category;
-
-            loadLessons();
-
-        };
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-/*
-====================================================
-              LOAD LESSONS
-====================================================
-*/
-
-function loadLessons() {
-
-    hideAllPages();
-
-    document
-        .getElementById("lessons")
-        .classList.remove("hidden");
-
-    document
-        .getElementById("lesson-title")
-        .textContent =
-            `${selectedGrade.name} → ${selectedCategory.name}`;
-
-    const container =
-        document.getElementById("lesson-list");
-
-    container.innerHTML = "";
-
-    selectedCategory.lessons.forEach(lesson => {
-
-        const button =
-            document.createElement("button");
-
-        button.className = "lesson-button";
-
-        button.innerHTML = `
-            <span class="lesson-number">
-                Lesson ${lesson.number}
-            </span>
-
-            ${lesson.title}
-        `;
+        button.textContent = category.name;
 
         button.onclick = () => {
-
-            startLesson(lesson);
-
+            showLessons(category);
         };
 
         container.appendChild(button);
@@ -1121,11 +585,51 @@ function loadLessons() {
 }
 
 
-/*
-====================================================
-              START A LESSON
-====================================================
-*/
+// =============================================================
+// CATEGORY SELECTION
+// =============================================================
+
+function showLessons(category) {
+
+    selectedCategory = category;
+
+    hideAllPages();
+
+    const page = document.getElementById("lessons");
+
+    page.classList.remove("hidden");
+
+    document.getElementById("lesson-title").textContent =
+        category.name;
+
+    const container =
+        document.getElementById("lesson-list");
+
+    container.innerHTML = "";
+
+    category.lessons.forEach(lesson => {
+
+        const button = document.createElement("button");
+
+        button.className = "lesson-button";
+
+        button.textContent =
+            `Lesson ${lesson.number}: ${lesson.title}`;
+
+        button.onclick = () => {
+            startLesson(lesson);
+        };
+
+        container.appendChild(button);
+
+    });
+
+}
+
+
+// =============================================================
+// START LESSON
+// =============================================================
 
 function startLesson(lesson) {
 
@@ -1142,37 +646,22 @@ function startLesson(lesson) {
         .classList.remove("hidden");
 
 
-    /*
-        Put lesson title on page
-    */
+    document.getElementById("lesson-page-title").textContent =
+        `Lesson ${lesson.number}: ${lesson.title}`;
+
+
+    document.getElementById("lesson-explanation").textContent =
+        lesson.explanation;
+
 
     document
-        .getElementById("current-lesson-title")
-        .textContent =
-            `Lesson ${lesson.number}: ${lesson.title}`;
-
-
-    /*
-        Put lesson explanation on page
-    */
-
-    document
-        .getElementById("current-lesson-content")
-        .innerHTML =
-            lesson.explanation;
-
-
-    /*
-        Reset practice
-    */
-
-    document
-        .getElementById("practice-area")
-        .classList.remove("hidden");
-
-    document
-        .getElementById("completion-area")
+        .getElementById("completion")
         .classList.add("hidden");
+
+
+    document
+        .getElementById("practice")
+        .classList.remove("hidden");
 
 
     showQuestion();
@@ -1180,11 +669,9 @@ function startLesson(lesson) {
 }
 
 
-/*
-====================================================
-                 SHOW QUESTION
-====================================================
-*/
+// =============================================================
+// SHOW QUESTION
+// =============================================================
 
 function showQuestion() {
 
@@ -1192,182 +679,258 @@ function showQuestion() {
         selectedLesson.questions[currentQuestion];
 
 
-    document
-        .getElementById("question-number")
-        .textContent =
-            `Question ${currentQuestion + 1} of ${selectedLesson.questions.length}`;
+    document.getElementById("question-number").textContent =
+        `Question ${currentQuestion + 1} of ${selectedLesson.questions.length}`;
 
 
-    document
-        .getElementById("question-text")
-        .textContent =
-            question.question;
+    document.getElementById("question-text").textContent =
+        question.question;
 
 
-    document
-        .getElementById("answer-input")
-        .value = "";
+    const input =
+        document.getElementById("answer-input");
 
 
-    document
-        .getElementById("answer-result")
-        .textContent = "";
+    input.value = "";
+
+    input.disabled = false;
+
+    input.focus();
 
 
-    document
-        .getElementById("answer-input")
-        .focus();
+    const feedback =
+        document.getElementById("feedback");
+
+
+    feedback.textContent = "";
+
+    feedback.className = "";
+
+
+    document.getElementById("check-button").disabled = false;
 
 }
 
 
-/*
-====================================================
-                 CHECK ANSWER
-====================================================
-*/
+// =============================================================
+// CHECK ANSWER
+// =============================================================
 
 function checkAnswer() {
 
     const input =
-        document
-            .getElementById("answer-input")
-            .value
-            .trim()
-            .toLowerCase();
+        document.getElementById("answer-input");
+
+    const feedback =
+        document.getElementById("feedback");
+
+    const button =
+        document.getElementById("check-button");
 
 
-    if (input === "") {
+    const userAnswer =
+        input.value.trim().toLowerCase();
 
-        document
-            .getElementById("answer-result")
-            .textContent =
-                "Please enter an answer.";
+
+    const correctAnswer =
+        String(
+            selectedLesson.questions[currentQuestion].answer
+        )
+        .trim()
+        .toLowerCase();
+
+
+    // Don't allow empty answers
+
+    if (userAnswer === "") {
+
+        feedback.textContent =
+            "⚠️ Enter an answer first!";
+
+        feedback.className = "wrong";
 
         return;
 
     }
 
 
-    const correctAnswer =
-        String(
-            selectedLesson
-                .questions[currentQuestion]
-                .answer
-        )
-        .trim()
-        .toLowerCase();
+    button.disabled = true;
+
+    input.disabled = true;
 
 
-    if (input === correctAnswer) {
+    // CORRECT
+
+    if (userAnswer === correctAnswer) {
 
         score++;
 
-        document
-            .getElementById("answer-result")
-            .textContent =
-                "✅ Correct!";
+        feedback.textContent =
+            "✅ Correct!";
 
-    } else {
+        feedback.className = "correct";
 
-        document
-            .getElementById("answer-result")
-            .textContent =
-                `❌ Not quite. The correct answer is ${correctAnswer}.`;
+    }
+
+    // WRONG
+
+    else {
+
+        feedback.textContent =
+            `❌ Not quite! The correct answer is ${selectedLesson.questions[currentQuestion].answer}.`;
+
+        feedback.className = "wrong";
 
     }
 
 
-    /*
-        Wait a moment before moving
-        to the next question.
-    */
+    // Move to next question
 
     setTimeout(() => {
 
         currentQuestion++;
 
+
         if (
-            currentQuestion >=
+            currentQuestion <
             selectedLesson.questions.length
         ) {
-
-            finishLesson();
-
-        } else {
 
             showQuestion();
 
         }
 
-    }, 1200);
+        else {
+
+            finishLesson();
+
+        }
+
+    }, 1500);
 
 }
 
 
-/*
-====================================================
-                FINISH LESSON
-====================================================
-*/
+// =============================================================
+// FINISH LESSON
+// =============================================================
 
 function finishLesson() {
 
     document
-        .getElementById("practice-area")
+        .getElementById("practice")
         .classList.add("hidden");
 
 
     document
-        .getElementById("completion-area")
+        .getElementById("completion")
         .classList.remove("hidden");
 
 
-    document
-        .getElementById("final-score")
-        .textContent =
-            `You scored ${score} out of ${selectedLesson.questions.length}.`;
+    document.getElementById("score").textContent =
+        `You scored ${score} out of ${selectedLesson.questions.length}!`;
+
+
+    const result =
+        document.getElementById("result-message");
+
+
+    if (
+        score ===
+        selectedLesson.questions.length
+    ) {
+
+        result.textContent =
+            "🏆 Perfect score! You crushed it!";
+
+    }
+
+    else if (score >= 3) {
+
+        result.textContent =
+            "👍 Nice work! Keep practicing and you'll get even stronger.";
+
+    }
+
+    else {
+
+        result.textContent =
+            "📚 Keep practicing! Try the lesson again and see if you can improve your score.";
+
+    }
 
 }
 
 
-/*
-====================================================
-              ENTER KEY SUPPORT
-====================================================
-*/
+// =============================================================
+// LOAD GRADES
+// =============================================================
 
-document.addEventListener("keydown", event => {
+function loadGrades() {
 
-    if (
-        event.key === "Enter" &&
-        !document
-            .getElementById("lesson-page")
-            .classList.contains("hidden")
-    ) {
-
-        const practice =
-            document.getElementById("practice-area");
+    const container =
+        document.getElementById("grade-list");
 
 
-        if (
-            !practice.classList.contains("hidden")
-        ) {
+    container.innerHTML = "";
 
-            checkAnswer();
 
-        }
+    grades.forEach(grade => {
+
+        const button =
+            document.createElement("button");
+
+
+        button.className = "card";
+
+        button.textContent = grade.name;
+
+
+        button.onclick = () => {
+            showCategories(grade);
+        };
+
+
+        container.appendChild(button);
+
+    });
+
+}
+
+
+// =============================================================
+// START WEBSITE
+// =============================================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        loadGrades();
+
+
+        document
+            .getElementById("check-button")
+            .addEventListener(
+                "click",
+                checkAnswer
+            );
+
+
+        document
+            .getElementById("answer-input")
+            .addEventListener(
+                "keydown",
+                event => {
+
+                    if (event.key === "Enter") {
+
+                        checkAnswer();
+
+                    }
+
+                }
+            );
 
     }
-
-});
-
-
-/*
-====================================================
-                  START WEBSITE
-====================================================
-*/
-
-loadGrades();
-```
+);
